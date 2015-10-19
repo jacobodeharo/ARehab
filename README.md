@@ -1,5 +1,5 @@
 # ARehab
-ARehab is a freeware software for physical rehab, aided by Augmented Reality technologies and user tracking systems, such as Microsoft Kinect v2. It was created during 2015 as a final project at the University of Granada and the aim of this project is to serve as a physical rehab system that will be usefull for medics and physical trainers. It's based on different technologies such as Augmented Reality, Kinect SDK v2, Qt SDK 5 (OpenSource), OpenGL, ... and it's wrote in C++.
+ARehab is a freeware software for physical rehab, aided by Augmented Reality technologies and user tracking systems, such as Microsoft Kinect v2. It was created during 2015 as a final project at the University of Granada and the aim of this project is to serve as a physical rehab system that will be usefull for medics and physical trainers. It's based on different technologies such as Augmented Reality, Kinect SDK v2, Qt SDK 5 (OpenSource), OpenGL, ... and it's wroten in C++.
 
 The following screenshots shows the interface design that has beware of a great design and having the user experience and the usability as a priority.
 
