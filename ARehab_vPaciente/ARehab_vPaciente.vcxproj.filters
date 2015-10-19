@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{27a88725-46bd-4a11-83cc-ffcdd64182da}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{3a5ae5b1-5e66-4ece-b4bd-e608f82d8ddc}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{ab6d307e-1797-4ed7-9e28-4c0c2b77a3e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="svg">
+      <UniqueIdentifier>{d028baa0-5a78-430d-8809-6f737f07582e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="styles">
+      <UniqueIdentifier>{3a8e02e7-d26c-498d-8c24-d3530d96d730}</UniqueIdentifier>
+      <Extensions>qss</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_ARehab_vPaciente.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ARehab_vPaciente.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ARehab_vPaciente.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ARehab_vPaciente.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ARehab_vPaciente.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ARehab_vPaciente.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ARehab_vPaciente.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\ARehab_vTerapeuta\ARehab.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ARehab_vTerapeuta\shaders\default.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\default.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\joints.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\joints.geom">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\joints.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\video.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\video.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\back.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\backHover.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\bad.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\checked.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\currentState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\fail.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\finalState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\good.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\humansilhouette.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\initialState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\innerState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\intervalLeft.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\intervalRight.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\jointSelected.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\jointSelector.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\maximize.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\next.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\nextHover.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\play.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\power.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\record.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\restart.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\state.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\stateFail.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\stateHover.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\stateok.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\svg\stop.svg">
+      <Filter>svg</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_ARehab_vPaciente.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ARehab.ico" />
+  </ItemGroup>
+</Project>

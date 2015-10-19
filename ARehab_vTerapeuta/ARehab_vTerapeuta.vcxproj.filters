@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{5c8e265a-5629-4a04-8b01-ab35d855c035}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{3dde9be5-4d5b-4feb-8957-9b591e94d5fa}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{0ec4db6f-dd1b-40bb-96df-bd13e1ef9b9d}</UniqueIdentifier>
+      <Extensions>frag; geom; vert;*</Extensions>
+    </Filter>
+    <Filter Include="svg">
+      <UniqueIdentifier>{9759b6f6-4509-4ebc-97a6-d2fb35aeb1c4}</UniqueIdentifier>
+      <Extensions>svg;</Extensions>
+    </Filter>
+    <Filter Include="styles">
+      <UniqueIdentifier>{c4ed1073-28a7-4bec-a9c6-14239bf56e61}</UniqueIdentifier>
+      <Extensions>qss</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_ARehab_vTerapeuta.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ARehab_vTerapeuta.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ARehab_vTerapeuta.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="ARehab_vTerapeuta.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ARehab_vTerapeuta.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ARehab_vTerapeuta.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ARehab_vTerapeuta.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ARehab.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_ARehab_vTerapeuta.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ARehab.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\joints.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\joints.geom">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\joints.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\video.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\video.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="svg\back.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\backHover.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\bad.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\checked.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\currentState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\fail.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\finalState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\good.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\humansilhouette.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\initialState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\jointSelected.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\jointSelector.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\next.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\nextHover.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\play.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\power.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\record.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\state.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\stateFail.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\stateHover.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\stop.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\innerState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\stateok.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="shaders\default.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\default.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="svg\intervalLeft.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\intervalRight.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\maximize.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\restart.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="styles\main.qss">
+      <Filter>styles</Filter>
+    </None>
+  </ItemGroup>
+</Project>
