@@ -9,7 +9,7 @@ The following screenshots shows the interface design that has beware of a great 
 ![Screenshot - Recording exercise](https://raw.githubusercontent.com/jacobodeharo/ARehab/master/Screenshots/Dise%C3%B1ador_1b.png)
 ![Screenshot - Cutting interval in the exercise](https://raw.githubusercontent.com/jacobodeharo/ARehab/master/Screenshots/Dise%C3%B1ador_2b.png)
 
-ARehab is at an early stage of development, therefore, the binaries are not distributed. Only the source code and resources needed are distributed. The user interface is localized in Spanish, but i18n will be a feature that is in my TODOs list.
+ARehab is at an early stage of development, therefore, only the source code and resources needed are distributed. The user interface is localized in Spanish, but i18n will be a feature that is in my TODOs list.
 
 If you are considering to colaborate in the project or have questions, you can contact me by:
 - email: jacobodeharo -at- gmail.com
