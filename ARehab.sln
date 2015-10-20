@@ -68,6 +68,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		Qt5Version = Qt5 x64 VS2013 OpenGL
+		Qt5Version = Qt5_5_x64
 	EndGlobalSection
 EndGlobal
