@@ -1,25 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    This file is part of ARehab.
-
-    ARehab is free software : you can redistribute it and / or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    ARehab is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with Foobar.If not, see <http://www.gnu.org/licenses/>.
-
-Copyright 2015 Jacobo de Haro
-jacobodeharo@gmail.com
-@jacobodeharo
-
--->
 <ui version="4.0">
  <class>ARehabClass</class>
  <widget class="QMainWindow" name="ARehabClass">
@@ -88,7 +67,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="btAbout">
          <property name="minimumSize">
           <size>
            <width>50</width>
@@ -135,7 +114,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="btHelp">
          <property name="minimumSize">
           <size>
            <width>50</width>
@@ -1331,8 +1310,8 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
   <tabstop>txARehabFile</tabstop>
   <tabstop>btFileChooser</tabstop>
   <tabstop>txDescription</tabstop>
-  <tabstop>pushButton</tabstop>
-  <tabstop>pushButton_2</tabstop>
+  <tabstop>btAbout</tabstop>
+  <tabstop>btHelp</tabstop>
   <tabstop>graphicsInicial</tabstop>
  </tabstops>
  <resources/>

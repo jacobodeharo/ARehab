@@ -547,6 +547,9 @@ namespace ARehabGUIDesigner
 		float wGraphicsView = ui.graphicsInicial->width();
 		float hGraphicsView = ui.graphicsInicial->height();
 
+		ui.btHelp->setIcon(QPixmap(QString::fromUtf8(":/svg/help.svg")));
+		ui.btAbout->setIcon(QPixmap(QString::fromUtf8(":/svg/about.svg")));
+
 		ui.graphicsInicial->verticalScrollBar()->blockSignals(true);
 		ui.graphicsInicial->horizontalScrollBar()->blockSignals(true);
 		ui.graphicsInicial->setScene(new QGraphicsScene);

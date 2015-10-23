@@ -325,6 +325,10 @@ namespace ARehabGUIPlayer
 
 	void ARehabMainWindow::loadGuiInitial(void)
 	{
+		//Load main window icons
+		ui.btHelp->setIcon(QPixmap(QString::fromUtf8(":/svg/help.svg")));
+		ui.btAbout->setIcon(QPixmap(QString::fromUtf8(":/svg/about.svg")));
+
 		this->guistatewidget->setStateName(0, QLatin1String("Definición"));
 		this->guistatewidget->setStateName(1, QLatin1String("Previsualización"));
 		this->guistatewidget->setStateName(2, QLatin1String("Realización"));
