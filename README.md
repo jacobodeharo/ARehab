@@ -27,6 +27,7 @@ ARehab is currently using Kinect as user tracking device. This obviously means t
 5. Download and copy the glm dir inside the solution's folder.
  For example, if you download and unzip glm in 'DownloadDirectory\glm-0.9.7.1\' copy the directory 'glm-0.9.7.1\glm\glm\' inside ARehab directory. 
 6. Ensure that Qt Version is correctly configured in each project. 
+
 That's all!
 
 *NOTE:* ARehab is in an early stage of development, therefore, only the source code and resources needed are distributed. The user interface is localized in Spanish, but i18n will be a feature that is in my TODOs list. 
