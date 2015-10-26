@@ -35,9 +35,7 @@
     </Filter>
     <Filter Include="Shaders">
       <UniqueIdentifier>{ab6d307e-1797-4ed7-9e28-4c0c2b77a3e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="svg">
-      <UniqueIdentifier>{d028baa0-5a78-430d-8809-6f737f07582e}</UniqueIdentifier>
+      <Extensions>frag; geom; vert;*</Extensions>
     </Filter>
     <Filter Include="styles">
       <UniqueIdentifier>{3a8e02e7-d26c-498d-8c24-d3530d96d730}</UniqueIdentifier>
@@ -96,87 +94,6 @@
     </None>
     <None Include="..\ARehab_vTerapeuta\shaders\video.vert">
       <Filter>Shaders</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\back.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\backHover.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\bad.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\checked.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\currentState.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\fail.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\finalState.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\good.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\humansilhouette.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\initialState.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\innerState.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\intervalLeft.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\intervalRight.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\jointSelected.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\jointSelector.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\maximize.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\next.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\nextHover.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\play.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\power.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\record.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\restart.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\state.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\stateFail.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\stateHover.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\stateok.svg">
-      <Filter>svg</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\svg\stop.svg">
-      <Filter>svg</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

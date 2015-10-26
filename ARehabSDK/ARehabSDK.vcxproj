@@ -450,6 +450,38 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_CONCURRENT_LIB -DQT_OPENGL_LIB -DQT_SVG_LIB -DAREHABSDK_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtConcurrent" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSvg"</Command>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="svg\about.svg" />
+    <None Include="svg\back.svg" />
+    <None Include="svg\backHover.svg" />
+    <None Include="svg\bad.svg" />
+    <None Include="svg\checked.svg" />
+    <None Include="svg\currentState.svg" />
+    <None Include="svg\fail.svg" />
+    <None Include="svg\finalState.svg" />
+    <None Include="svg\good.svg" />
+    <None Include="svg\help.svg" />
+    <None Include="svg\humansilhouette.svg" />
+    <None Include="svg\initialState.svg" />
+    <None Include="svg\innerState.svg" />
+    <None Include="svg\intervalLeft.svg" />
+    <None Include="svg\intervalRight.svg" />
+    <None Include="svg\jointSelected.svg" />
+    <None Include="svg\jointSelector.svg" />
+    <None Include="svg\maximize.svg" />
+    <None Include="svg\next.svg" />
+    <None Include="svg\nextHover.svg" />
+    <None Include="svg\play.svg" />
+    <None Include="svg\power.svg" />
+    <None Include="svg\record.svg" />
+    <None Include="svg\restart.svg" />
+    <None Include="svg\save.svg" />
+    <None Include="svg\state.svg" />
+    <None Include="svg\stateFail.svg" />
+    <None Include="svg\stateHover.svg" />
+    <None Include="svg\stateok.svg" />
+    <None Include="svg\stop.svg" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

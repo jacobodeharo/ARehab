@@ -33,6 +33,10 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+    <Filter Include="svg">
+      <UniqueIdentifier>{8fcaaec7-9d89-4bb3-b1f0-e0775ad00e88}</UniqueIdentifier>
+      <Extensions>svg</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ARehabFrame.cpp">
@@ -267,5 +271,97 @@
     <CustomBuild Include="QJointSelectorItem.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="svg\stop.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\about.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\back.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\backHover.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\bad.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\checked.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\currentState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\fail.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\finalState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\good.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\help.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\humansilhouette.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\initialState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\innerState.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\intervalLeft.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\intervalRight.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\jointSelected.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\jointSelector.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\maximize.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\next.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\nextHover.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\play.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\power.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\record.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\restart.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\save.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\state.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\stateFail.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\stateHover.svg">
+      <Filter>svg</Filter>
+    </None>
+    <None Include="svg\stateok.svg">
+      <Filter>svg</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -233,33 +233,6 @@
     <None Include="..\ARehab_vTerapeuta\shaders\joints.vert" />
     <None Include="..\ARehab_vTerapeuta\shaders\video.frag" />
     <None Include="..\ARehab_vTerapeuta\shaders\video.vert" />
-    <None Include="..\ARehab_vTerapeuta\svg\back.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\backHover.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\bad.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\checked.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\currentState.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\fail.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\finalState.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\good.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\humansilhouette.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\initialState.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\innerState.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\intervalLeft.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\intervalRight.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\jointSelected.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\jointSelector.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\maximize.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\next.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\nextHover.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\play.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\power.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\record.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\restart.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\state.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\stateFail.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\stateHover.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\stateok.svg" />
-    <None Include="..\ARehab_vTerapeuta\svg\stop.svg" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_ARehab_vPaciente.h" />
