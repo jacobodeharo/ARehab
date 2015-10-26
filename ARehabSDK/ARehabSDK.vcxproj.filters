@@ -37,6 +37,9 @@
       <UniqueIdentifier>{8fcaaec7-9d89-4bb3-b1f0-e0775ad00e88}</UniqueIdentifier>
       <Extensions>svg</Extensions>
     </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{079ede8b-b7fc-4db6-875a-011e452901d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ARehabFrame.cpp">
@@ -362,6 +365,27 @@
     </None>
     <None Include="svg\stateok.svg">
       <Filter>svg</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\default.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\default.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\joints.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\joints.geom">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\joints.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\video.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\ARehab_vTerapeuta\shaders\video.vert">
+      <Filter>Shaders</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -33,10 +33,6 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
-    <Filter Include="Shaders">
-      <UniqueIdentifier>{ab6d307e-1797-4ed7-9e28-4c0c2b77a3e8}</UniqueIdentifier>
-      <Extensions>frag; geom; vert;*</Extensions>
-    </Filter>
     <Filter Include="styles">
       <UniqueIdentifier>{3a8e02e7-d26c-498d-8c24-d3530d96d730}</UniqueIdentifier>
       <Extensions>qss</Extensions>
@@ -72,29 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\ARehab_vTerapeuta\ARehab.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\ARehab_vTerapeuta\shaders\default.frag">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\shaders\default.vert">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\shaders\joints.frag">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\shaders\joints.geom">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\shaders\joints.vert">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\shaders\video.frag">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="..\ARehab_vTerapeuta\shaders\video.vert">
-      <Filter>Shaders</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_ARehab_vPaciente.h">

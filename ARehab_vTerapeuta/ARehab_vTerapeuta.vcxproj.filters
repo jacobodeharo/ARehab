@@ -34,10 +34,6 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
-    <Filter Include="Shaders">
-      <UniqueIdentifier>{0ec4db6f-dd1b-40bb-96df-bd13e1ef9b9d}</UniqueIdentifier>
-      <Extensions>frag; geom; vert;*</Extensions>
-    </Filter>
     <Filter Include="styles">
       <UniqueIdentifier>{c4ed1073-28a7-4bec-a9c6-14239bf56e61}</UniqueIdentifier>
       <Extensions>qss</Extensions>
@@ -86,27 +82,6 @@
     <Image Include="ARehab.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\joints.frag">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="shaders\joints.geom">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="shaders\joints.vert">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="shaders\video.frag">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="shaders\video.vert">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="shaders\default.frag">
-      <Filter>Shaders</Filter>
-    </None>
-    <None Include="shaders\default.vert">
-      <Filter>Shaders</Filter>
-    </None>
     <None Include="styles\main.qss">
       <Filter>styles</Filter>
     </None>

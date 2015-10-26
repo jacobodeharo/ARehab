@@ -226,15 +226,6 @@
     <ResourceCompile Include="..\ARehab_vTerapeuta\ARehab.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\ARehab_vTerapeuta\shaders\default.frag" />
-    <None Include="..\ARehab_vTerapeuta\shaders\default.vert" />
-    <None Include="..\ARehab_vTerapeuta\shaders\joints.frag" />
-    <None Include="..\ARehab_vTerapeuta\shaders\joints.geom" />
-    <None Include="..\ARehab_vTerapeuta\shaders\joints.vert" />
-    <None Include="..\ARehab_vTerapeuta\shaders\video.frag" />
-    <None Include="..\ARehab_vTerapeuta\shaders\video.vert" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_ARehab_vPaciente.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>

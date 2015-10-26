@@ -9,8 +9,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ARehab_vPaciente", "ARehab_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ARehabSDK", "ARehabSDK\ARehabSDK.vcxproj", "{5E0D1401-F7B8-4120-B479-3AEBFC37D4A6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{CF2659E6-67FC-4C2C-8CDB-F2DF63873994}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM

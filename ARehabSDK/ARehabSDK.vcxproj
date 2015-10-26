@@ -451,6 +451,13 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\ARehab_vTerapeuta\shaders\default.frag" />
+    <None Include="..\ARehab_vTerapeuta\shaders\default.vert" />
+    <None Include="..\ARehab_vTerapeuta\shaders\joints.frag" />
+    <None Include="..\ARehab_vTerapeuta\shaders\joints.geom" />
+    <None Include="..\ARehab_vTerapeuta\shaders\joints.vert" />
+    <None Include="..\ARehab_vTerapeuta\shaders\video.frag" />
+    <None Include="..\ARehab_vTerapeuta\shaders\video.vert" />
     <None Include="svg\about.svg" />
     <None Include="svg\back.svg" />
     <None Include="svg\backHover.svg" />

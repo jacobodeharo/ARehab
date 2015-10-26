@@ -239,13 +239,6 @@
     <Image Include="ARehab.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\default.frag" />
-    <None Include="shaders\default.vert" />
-    <None Include="shaders\joints.frag" />
-    <None Include="shaders\joints.geom" />
-    <None Include="shaders\joints.vert" />
-    <None Include="shaders\video.frag" />
-    <None Include="shaders\video.vert" />
     <None Include="styles\main.qss" />
   </ItemGroup>
   <ItemGroup>

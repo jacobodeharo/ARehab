@@ -284,21 +284,21 @@ namespace ARehabUI
 	{
 		try {
 			defaultShader = new GLShader(this->gl);
-			defaultShader->compile("./shaders/default.vert");
-			defaultShader->compile("./shaders/default.frag");
+			defaultShader->compile("../ARehabSDK/shaders/default.vert");
+			defaultShader->compile("../ARehabSDK/shaders/default.frag");
 			defaultShader->link();
 			defaultShader->validate();
 
 			shaderProgVideo = new GLShader(this->gl);
-			shaderProgVideo->compile("./shaders/video.vert");
-			shaderProgVideo->compile("./shaders/video.frag");
+			shaderProgVideo->compile("../ARehabSDK/shaders/video.vert");
+			shaderProgVideo->compile("../ARehabSDK/shaders/video.frag");
 			shaderProgVideo->link();
 			shaderProgVideo->validate();
 
 			shaderProgBodyJoints = new GLShader(this->gl);
-			shaderProgBodyJoints->compile("./shaders/joints.vert");
-			//shaderProgBodyJoints->compile("./shaders/joints.geom");
-			shaderProgBodyJoints->compile("./shaders/joints.frag");
+			shaderProgBodyJoints->compile("../ARehabSDK/shaders/joints.vert");
+			//shaderProgBodyJoints->compile("../ARehabSDK/shaders/joints.geom");
+			shaderProgBodyJoints->compile("../ARehabSDK/shaders/joints.frag");
 			shaderProgBodyJoints->link();
 			shaderProgBodyJoints->validate();
 		}
