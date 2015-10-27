@@ -235,3 +235,6 @@ ARehabFiles/*
 
 #OSX
 .DS_Store
+
+# GLM library -> now the developer must download it
+glm/
