@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ARehab_vTerapeuta", "ARehab_vTerapeuta\ARehab_vTerapeuta.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
 EndProject
@@ -69,5 +69,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		Qt5Version = Qt5_5_x64
+		SolutionGuid = {9EE0A91D-564B-470B-9536-B72B19F0C8D0}
 	EndGlobalSection
 EndGlobal

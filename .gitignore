@@ -238,3 +238,4 @@ ARehabFiles/*
 
 # GLM library -> now the developer must download it
 glm/
+ARehab\.VC\.db
