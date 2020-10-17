@@ -7,14 +7,14 @@ There are some screenshots of the early release in the project website: [http://
 
 ## Hardware/software requirements
 
-ARehab is currently using Kinect as user tracking device. This obviously means that ARehab system requires a Kinect v2 device, and Kinect SDK v2 installed over Windows 8 (x64), Windows 8.1 (x64) or Windows 10 (x64). However, in a near future, I would like to add more hardware devices for specific body parts, like Leap Motion, commonly used for tracking the hands and fingers. The aim is gradually replacing of all the Microsoft components by their open source alternatives (e.g. [libfreenect2 driver](https://github.com/OpenKinect/libfreenect2)) to get a fully multiplatform system for Windows, OSX and Linux.
+ARehab requires Kinect v2 as user tracking device and Kinect SDK v2 installed over Windows 8 (x64), Windows 8.1 (x64) or Windows 10 (x64).
 
 ### Hardware requirements:
 * Kinect for Windows v2 (out of Windows Store) / Kinect for Xbox One + Kinect for Windows adapter (out of store).
 * See the Kinect v2 requirements [here](https://msdn.microsoft.com/es-es/library/dn782036.aspx).
 
 ### Software requirements:
-* [Microsoft Visual Studio Community 2017](https://visualstudio.microsoft.com/es/thank-you-downloading-visual-studio/?sku=Community&rel=15), I suggest to use it because there isn't CMake makefile.
+* [Microsoft Visual Studio Community 2017](https://visualstudio.microsoft.com/es/thank-you-downloading-visual-studio/?sku=Community&rel=15), I suggest to use it because there isn't CMake makefile. Sorry for that!
 * [Qt SDK 5 OpenSource + Add-in for Qt 5](http://www.qt.io/download-open-source/)
 * [GLM](http://glm.g-truc.net/0.9.7/index.html). It's included in source files.
 * OpenGL 4.3 / GLSL 430 -> Used as paint subsystem engine.
@@ -27,10 +27,9 @@ ARehab is currently using Kinect as user tracking device. This obviously means t
 
 That's all!
 
-*NOTE:* ARehab is in an early stage of development, therefore, only the source code and resources needed are distributed. The user interface is localized in Spanish, but i18n will be a feature that is in my TODOs list. 
+*NOTE:* ARehab is in an early stage of development, therefore, only the source code and resources needed are distributed. The user interface is localized in Spanish. 
 
-If you are considering to colaborate or have questions, you can contact me by:
+If you are considering to colaborate or you have any question, you can contact me by:
 - email: jacobodeharo@gmail.com
-- twitter: [`@jacobodeharo`](http://twitter.com/jacobodeharo)
 - LinkedIn: https://www.linkedin.com/in/jacobodeharo
 
