@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>ARehab - Reproductor de ejercicios</string>
+   <string>ARehab - Exersise player</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="mainGridLayout" rowstretch="1,6,1">
