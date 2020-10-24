@@ -229,13 +229,7 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 
-#ARehabFiles directory
-ARehabFiles/
-ARehabFiles/*
-
 #OSX
 .DS_Store
 
-# GLM library -> now the developer must download it
-glm/
 ARehab\.VC\.db
