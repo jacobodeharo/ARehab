@@ -46,7 +46,6 @@ namespace ARehabUI
 	void QJointSelectorWidget::loadSVGFiles(void)
 	{
 		QGraphicsScene * scene = this->scene();
-		//scene->setSceneRect(0, 0, this->width(), this->height());
 		scene->setBackgroundBrush(Qt::NoBrush);
 
 		containerRect = new QGraphicsRectItem(0, 0, this->width(), this->height());
@@ -105,9 +104,7 @@ namespace ARehabUI
 
 	void QJointSelectorWidget::doLayout(void)
 	{
-		QGraphicsScene * scene = this->scene();
-		//scene->setSceneRect(0, 0, this->width(), this->height());
-		
+		QGraphicsScene * scene = this->scene();		
 		QGraphicsItemToolkit::centerItemHorizontally(humanSilohuete);
 		QGraphicsItemToolkit::centerItemHorizontally(containerRect);
 
@@ -194,15 +191,12 @@ namespace ARehabUI
 	void QJointSelectorWidget::init(void)
 	{
 		this->setMinimumWidth(300);
-		//this->setMinimumHeight(500);
 		this->setMouseTracking(true);
 		this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 		this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 		this->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
 		this->setRenderHints(QPainter::Antialiasing | QPainter::HighQualityAntialiasing | QPainter::SmoothPixmapTransform | QPainter::TextAntialiasing);
 		this->setStyleSheet("border: none; background: transparent");
-
-		//QGraphicsScene * scene = this->scene();
 
 		loadSVGFiles();
 		connectItems();

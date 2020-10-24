@@ -29,7 +29,6 @@ namespace ARehabUI
 		id(id)
 	{
 		this->scene()->addItem(svgCheck);
-		//svgCheck->setPos(this->pos());
 		svgCheck->hide();
 		this->setCheckable(true);
 		this->colorChecked = QColor(0, 255, 0);

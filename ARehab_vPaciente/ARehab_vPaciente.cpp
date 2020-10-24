@@ -32,7 +32,6 @@ namespace ARehabGUIPlayer
 		glWidgetPreview(new QGLViewer(this)),
 		glWidgetPlayer(new QGLViewer(this)),
 		fileReaderController(0),
-//		fileWriterController(0),
 		timerPlayer(0),
 		timerPreview(0),
 		playControlWidget(new QARehabFileControlWidget()),
@@ -41,10 +40,9 @@ namespace ARehabGUIPlayer
 		fileDialog(NULL),
 		maximized(false)
 	{
-		this->fileDialog = new QFileDialog(this, tr("Seleccione la ruta del fichero"), dirFiles.absolutePath(), tr("ARehab Files (*.arehab)"));
+		this->fileDialog = new QFileDialog(this, tr("Select the file path..."), dirFiles.absolutePath(), tr("ARehab Files (*.arehab)"));
 
 		this->fileReaderController = new ARehabFileReaderController();
-//		this->fileWriterController = new ARehabFileWriterController();
 		this->timerPlayer = new QTimer(this);
 		this->timerPreview = new QTimer(this);
 		this->timerPlayer->setTimerType(Qt::PreciseTimer);
@@ -62,9 +60,7 @@ namespace ARehabGUIPlayer
 		switch (this->state)
 		{
 			case PREVIEW_INITIAL:
-				this->glWidgetPlayer->slot_pauseAnimation();				
-				//leftFrame = previewControlWidget->GetLeftFrameIndex();
-				//rightFrame = previewControlWidget->GetRightFrameIndex();
+				this->glWidgetPlayer->slot_pauseAnimation();
 				this->fileReaderController->ResetCurrentFrame(0);
 				frameFile = fileReaderController->GetNextARehabFrame();
 				if (frameFile && glWidgetPreview->isVisible()) 
@@ -329,9 +325,9 @@ namespace ARehabGUIPlayer
 		ui.btHelp->setIcon(QPixmap(QString::fromUtf8(":/svg/help.svg")));
 		ui.btAbout->setIcon(QPixmap(QString::fromUtf8(":/svg/about.svg")));
 
-		this->guistatewidget->setStateName(0, QLatin1String("Definición"));
-		this->guistatewidget->setStateName(1, QLatin1String("Previsualización"));
-		this->guistatewidget->setStateName(2, QLatin1String("Realización"));
+		this->guistatewidget->setStateName(0, QLatin1String("Definition"));
+		this->guistatewidget->setStateName(1, QLatin1String("Previsualization"));
+		this->guistatewidget->setStateName(2, QLatin1String("Performing"));
 
 		float wGraphicsView = ui.graphicsInicial->width();
 		float hGraphicsView = ui.graphicsInicial->height();
@@ -360,7 +356,7 @@ namespace ARehabGUIPlayer
 
 		QFont btFont("Calibri", 16, QFont::Light);
 
-		btLoad = new QPushButton("Cargar Ejercicio");
+		btLoad = new QPushButton("Load exersise");
 		btLoad->setMinimumSize(360, 60);
 		btLoad->setFont(btFont);
 		proxyBtLoad = scene->addWidget(btLoad);
@@ -415,7 +411,6 @@ namespace ARehabGUIPlayer
 	void ARehabMainWindow::resetGuiState2(void)
 	{
 		this->glWidgetPreview->update();
-		//this->kinectControlWidget->resetWidget();
 		this->state = PREVIEW_INITIAL;
 		QTimer::singleShot(5, this, &ARehabMainWindow::slot_update);
 	}
@@ -435,12 +430,8 @@ namespace ARehabGUIPlayer
 	{
 		this->timerPlayer->stop();
 		this->timerPreview->stop();
-
 		this->state = INITIAL;
-		
 		this->fileReaderController->CloseImputFile();
-		//this->fileWriterController->CloseOutputFile();
-
 		this->resetGuiState1();
 		this->resetGuiState2();
 		this->resetGuiState3();
@@ -485,7 +476,7 @@ namespace ARehabGUIPlayer
 					if (arehabFileMetadata.numRepetitions > 0)
 					{
 						unsigned int buttonID = (arehabFileMetadata.numRepetitions / 5) - 1;
-						//ui.btGroupRepeats->buttonToggled(buttonID, true);
+
 						for (unsigned int i = 0; i < ui.btGroupRepeats->buttons().size(); ++i)
 						{
 							QPushButton * bt = reinterpret_cast<QPushButton*>(ui.btGroupRepeats->button(i));
@@ -519,17 +510,13 @@ namespace ARehabGUIPlayer
 	void ARehabMainWindow::showGUIState2(void)
 	{
 		this->guistatewidget->showNextButton(true);
-		//this->previewControlWidget->SetEditable(false);
 	}
 
 	void ARehabMainWindow::showGUIState3(void)
 	{
 		this->resetGuiState3();		
 		this->timerPlayer->stop();
-//		this->fileWriterController->CloseOutputFile();
-
 		this->playControlWidget->setEnabled(true);
-		
 		this->guistatewidget->showNextButton(false);
 		this->playControlWidget->doLayout();
 	}

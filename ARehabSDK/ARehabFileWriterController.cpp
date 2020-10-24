@@ -54,8 +54,7 @@ namespace ARehabControl
 		outputFile->write(reinterpret_cast<char const*>(frame->body->joints2D), JointType_Count * sizeof(glm::vec2)); //2D Joint positions	
 		outputFile->write(reinterpret_cast<char const*>(frame->body->jointOrientations), JointType_Count * sizeof(glm::vec4)); //Joint orientations
 		outputFile->write(reinterpret_cast<char const*>(frame->body->kinectTrackedState), JointType_Count * sizeof(unsigned int)); //Joint state (tracked...)
-		outputFile->write(reinterpret_cast<char const*>(frame->color->colorBufferYUY2), 1920 * 1080 * 2); //YUY2 color texture (2 Bytes per pixel)					
-		//frame->timespan = ARehabTools::Measures::milliseconds_now();
+		outputFile->write(reinterpret_cast<char const*>(frame->color->colorBufferYUY2), 1920 * 1080 * 2); //YUY2 color texture (2 Bytes per pixel)
 		outputFile->write(reinterpret_cast<char const*>(&(frame->timespan)), sizeof(unsigned long long int)); //Timespan				
 	}
 

@@ -50,15 +50,6 @@ namespace ARehabGL
 			positionData[i + 2] = -1000.0f;
 		}
 
-		////Indices for GL_LINE_STRIPS
-		//GLuint indices[25] = {
-		//	0, 1, 20, 2, 3,	//LINE_STRIP_1 (SPINE_BASE -> SPINE_MID -> SPINE_SHOULDER -> NECK -> HEAD)
-		//	20, 8, 9, 10, 11, // LINE_STRIP_RIGHT_ARM (SPINE_SHOULDER -> SHOULDER_RIGHT -> ELBOW_RIGHT -> WRIST_RIGHT -> HAND_RIGHT)
-		//	20, 4, 5, 6, 7,	//LINE_STRIP_LEFT_ARM (SPINE_SHOULDER -> SHOULDER_LEFT -> ELBOW_LEFT -> WRIST_LEFT -> HAND_LEFT)
-		//	0, 12, 13, 14, 15, //LINE_STRIP_LEFT_LEG (SPINE_BASE -> HIP_LEFT -> KNEE_LEFT -> ANKLE_LEFT ->FOOT_LEFT)
-		//	0, 16, 17, 18, 19	//LINE_STRIP_RIGHT_LEG (SPINE_BASE -> HIP_RIGHT -> KNEE_RIGHT -> ANKLE_RIGHT -> FOOT_RIGHT)
-		//};
-
 		GLfloat colorData[GLVBOBody::maxJoints * 3];
 		memset(colorData, 0, GLVBOBody::maxJoints * 3 * sizeof(GLfloat));
 		for (int i = 0; i < GLVBOBody::maxJoints * 3; i = i + 3)
@@ -184,7 +175,6 @@ namespace ARehabGL
 
 				//GL_LINEs
 				gl->glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->vboHandles[3]);
-				//gl->glDrawElements(GL_POINTS, GLVBOBody::maxJoints, GL_UNSIGNED_INT, BUFFER_OFFSET_UINT(0));
 				for (unsigned int i = 0; i < 5; ++i) //Foreach bodyPart (two nested Joints are one bodyPart)
 				{
 					for (unsigned int j = 5 * i; j < (5 * i + 4); ++j) //For each pair, draw GL_LINES

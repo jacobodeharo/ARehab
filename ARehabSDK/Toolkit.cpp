@@ -43,8 +43,6 @@ namespace ARehabTools
 	}
 
 	const char * GLToolkit::getTypeString(GLenum type) {
-		// There are many more types than are covered here, but
-		// these are the most common in these examples.
 		switch (type) {
 		case GL_FLOAT:
 			return "float";

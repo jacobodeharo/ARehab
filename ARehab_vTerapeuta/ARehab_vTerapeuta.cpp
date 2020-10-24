@@ -43,11 +43,10 @@ namespace ARehabGUIDesigner
 		maximized(false)
 	{
 
-		this->fileDialog = new QFileDialog(this, tr("Seleccione la ruta del fichero"), dirFiles.absolutePath(), tr("ARehab Files (*.arehab)"));
+		this->fileDialog = new QFileDialog(this, tr("Select the file path"), dirFiles.absolutePath(), tr("ARehab Files (*.arehab)"));
 		this->kinectController = new KinectController();
 		this->fileReaderController = new ARehabFileReaderController();
 		this->fileWriterController = new ARehabFileWriterController();
-		//this->fileCutterController = new ARehabFileCutter();
 		this->timerFrames = new QTimer(this);
 		this->timerFrames2 = new QTimer(this);
 		this->timerFrames->setTimerType(Qt::PreciseTimer);
@@ -81,7 +80,7 @@ namespace ARehabGUIDesigner
 		case KINECT_RECORDING:
 			this->glwidget2->slot_pauseAnimation();
 			frameKinect = this->kinectController->GetNextARehabFrame();
-			if (frameKinect /*&& maxReached > 0*/)
+			if (frameKinect)
 			{
 				frameKinect->refCount++;
 				emit newARehabKinectFrame(frameKinect);
@@ -181,7 +180,6 @@ namespace ARehabGUIDesigner
 		QObject::connect(ui.txNombreEjercicio, &QLineEdit::textChanged, this, &ARehabMainWindow::slot_validateTXName);
 		QObject::connect(ui.txARehabFile, &QLineEdit::textChanged, this, &ARehabMainWindow::slot_validateFileURL);
 		QObject::connect(ui.txDescription, &QPlainTextEdit::textChanged, this, &ARehabMainWindow::slot_validateDescription);
-		//connect(buttonGroup, static_cast<void(QButtonGroup::*)(int)>(&QButtonGroup::buttonReleased),[=](int id){ /* ... */ });
 		QObject::connect(ui.btGroupRepeats, static_cast<void(QButtonGroup::*)(int)>(&QButtonGroup::buttonReleased), this, &ARehabMainWindow::slot_btGroupRepToggled);
 		QObject::connect(this->jointSelectorWidget, &QJointSelectorWidget::sig_jointsStateChanged, this, &ARehabMainWindow::slot_validateJoints);
 
@@ -193,9 +191,6 @@ namespace ARehabGUIDesigner
 		QObject::connect(this->kinectControlWidget, &QKinectControlWidget::sig_kinectOn, this, &ARehabMainWindow::slot_KinectOnOff);
 		QObject::connect(this->kinectControlWidget, &QKinectControlWidget::sig_kinectRecord, this, &ARehabMainWindow::slot_KinectRecord);
 		QObject::connect(this, &ARehabMainWindow::sig_kinectRecord, this, &ARehabMainWindow::slot_validateGuiState2);
-
-		//QObject::connect(this, &ARehabMainWindow::sig_kinectOnOff, this, &ARehabMainWindow::slot_KinectOnOff);
-		//QObject::connect(this, &ARehabMainWindow::sig_kinectRecord, this, &ARehabMainWindow::slot_KinectRecord);
 		QObject::connect(this->kinectControlWidget, &QKinectControlWidget::sig_kinectMaximize, this, &ARehabMainWindow::slot_Maximize);
 
 		QObject::connect(this->arehabfileControlWidget, &QARehabFileControlWidget::sig_PlayPause, this, &ARehabMainWindow::slot_ArehabFilePlayPause);
@@ -257,7 +252,6 @@ namespace ARehabGUIDesigner
 		else {
 			this->state = KINECT_INITIAL;
 			this->fileWriterController->CloseOutputFile();
-			//emit sig_kinectRecordFinished();
 		}
 	}
 
@@ -327,9 +321,9 @@ namespace ARehabGUIDesigner
 	void ARehabMainWindow::slot_ARehabSaveFile(void)
 	{
 		QMessageBox msgBox;
-		msgBox.setText(QLatin1String("El fichero va a ser recortado, esta operación es irreversible."));
-		msgBox.setInformativeText(QLatin1String("¿Está seguro?"));
-		msgBox.setStandardButtons(QMessageBox::Save /*| QMessageBox::Discard*/ | QMessageBox::Cancel);
+		msgBox.setText(QLatin1String("The file will be cut and this operation is irreversible..."));
+		msgBox.setInformativeText(QLatin1String("Are you sure?"));
+		msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Cancel);
 		msgBox.setDefaultButton(QMessageBox::Cancel);
 		int ret = msgBox.exec();
 		unsigned long long int left = 0, right = 0;
@@ -340,8 +334,8 @@ namespace ARehabGUIDesigner
 									if (this->fileReaderController->CutIntervalToFile(left, right))
 									{
 										QMessageBox msgBoxCutOk;
-										msgBoxCutOk.setText(QLatin1String("Fichero recortado"));
-										msgBoxCutOk.setInformativeText(QLatin1String("El fichero ARehab ha sido recortado exitosamente."));
+										msgBoxCutOk.setText(QLatin1String("File cut"));
+										msgBoxCutOk.setInformativeText(QLatin1String("The ARehab file has been cut successfuly."));
 										msgBoxCutOk.setStandardButtons(QMessageBox::Ok);
 										msgBoxCutOk.setDefaultButton(QMessageBox::Ok);
 										msgBoxCutOk.exec();
@@ -371,7 +365,7 @@ namespace ARehabGUIDesigner
 				{
 					QFile metadataFile(arehabFileMetadataURL);
 					if (!metadataFile.open(QIODevice::WriteOnly)) {
-						qWarning() << "Error abriendo el fichero para guardar." << endl;
+						qWarning() << "Error opening file to save." << endl;
 						return;
 					}
 					this->arehabFileMetadata.arehabFileURL = QUrl::fromLocalFile(arehabFileMetadataURL).toLocalFile();
@@ -575,20 +569,15 @@ namespace ARehabGUIDesigner
 
 		QFont btFont("Calibri", 16, QFont::Light);
 
-		btNew = new QPushButton("Nuevo Ejercicio");
+		btNew = new QPushButton("Create Exersise");
 		btNew->setMinimumSize(360, 60);
 		btNew->setFont(btFont);
 		proxyBtNuevo = scene->addWidget(btNew);
 
-		btLoad = new QPushButton("Cargar Ejercicio");
+		btLoad = new QPushButton("Load Exersise");
 		btLoad->setMinimumSize(360, 60);
 		btLoad->setFont(btFont);
 		proxyBtLoad = scene->addWidget(btLoad);
-
-		btLoadResults = new QPushButton("Cargar Resultados de Paciente");
-		btLoadResults->setMinimumSize(360, 60);
-		btLoadResults->setFont(btFont);
-		proxyBtLoadResults = scene->addWidget(btLoadResults);
 
 		QGridLayout * layoutBottomFrame = reinterpret_cast<QGridLayout*>(ui.bottomFrame->layout());
 		if (layoutBottomFrame)
@@ -600,7 +589,6 @@ namespace ARehabGUIDesigner
 
 	void ARehabMainWindow::loadGuiState1(void)
 	{
-		//ui.layoutJointSelector->addWidget(this->jointSelectorWidget, 2, 0);
 		ui.layout4JointWidget->addWidget(this->jointSelectorWidget, 2, 0);
 
 		ui.btGroupRepeats->setId(ui.bt5rep, 0);
@@ -635,13 +623,11 @@ namespace ARehabGUIDesigner
 		if (!validate)
 		{
 			ui.lbValidationName->setPixmap(QPixmap(QString::fromUtf8(":/svg/bad.svg")));
-			//ui.lbValidationName->show();
 		}
 		else
 		{
 			this->arehabFileMetadata.exerciseName = ui.txNombreEjercicio->text();
 			ui.lbValidationName->setPixmap(QPixmap(QString::fromUtf8(":/svg/checked.svg")));
-			//ui.lbValidationName->show();
 		}
 		return validate;
 	}
@@ -654,12 +640,10 @@ namespace ARehabGUIDesigner
 		if (!checkFile.exists() || !checkFile.isFile()) {
 			validate = false;
 			ui.lbValidationFile->setPixmap(QPixmap(QString::fromUtf8(":/svg/bad.svg")));
-			//ui.lbValidationFile->show();
 		}
 		else
 		{
 			ui.lbValidationFile->setPixmap(QPixmap(QString::fromUtf8(":/svg/checked.svg")));
-			//ui.lbValidationFile->show();
 		}
 		return validate;
 	}
@@ -671,13 +655,11 @@ namespace ARehabGUIDesigner
 		if (!text.length()) {
 			validate = false;
 			ui.lbValidationDescription->setPixmap(QPixmap(QString::fromUtf8(":/svg/bad.svg")));
-			//ui.lbValidationDescription->show();
 		}
 		else
 		{
 			this->arehabFileMetadata.description = text;
 			ui.lbValidationDescription->setPixmap(QPixmap(QString::fromUtf8(":/svg/checked.svg")));
-			//ui.lbValidationDescription->show();
 		}
 		return validate;
 	}
@@ -700,8 +682,6 @@ namespace ARehabGUIDesigner
 	bool ARehabMainWindow::validateJointSelection(void)
 	{
 		bool validate = true, someBitActive = false;
-		//QBitArray nullBitArray(21, false);
-		//QBitArray bitArray = jointSelectorWidget->getJointSelectorModel();
 		QBitArray bitArray = jointSelectorWidget->getJointSelectorModel();
 
 		for (unsigned int i = 0; i < bitArray.size(); ++i)
@@ -712,14 +692,12 @@ namespace ARehabGUIDesigner
 		if (!someBitActive)
 		{			
 			ui.lbValidationJoints->setPixmap(QPixmap(QString::fromUtf8(":/svg/bad.svg")));
-			//ui.lbValidationJoints->show();
 			validate = false;
 		}
 		else
 		{
 			this->arehabFileMetadata.jointsInvolved = this->jointSelectorWidget->getJointSelectorModel();
 			ui.lbValidationJoints->setPixmap(QPixmap(QString::fromUtf8(":/svg/checked.svg")));
-			//ui.lbValidationJoints->show();
 		}
 		return validate;
 	}
@@ -740,9 +718,6 @@ namespace ARehabGUIDesigner
 			if (btChecked)
 				this->arehabFileMetadata.numRepetitions = btChecked->text().toUInt();
 			this->arehabFileMetadata.save(this->arehabFileMetadata.metadataFileURL);
-
-			//this->glwidget->updateBodyBuffer(this->arehabFileMetadata.jointsInvolved);
-			//this->glwidget2->updateBodyBuffer(this->arehabFileMetadata.jointsInvolved);
 
 			this->guistatewidget->setStateValidation(QGUIStateWidget::Definition, QSVGTristateItem::ItemState::Valid);
 		}
@@ -895,11 +870,10 @@ namespace ARehabGUIDesigner
 					if (arehabFileMetadata.numRepetitions > 0)
 					{
 						unsigned int buttonID = (arehabFileMetadata.numRepetitions / 5) - 1;
-						//ui.btGroupRepeats->buttonToggled(buttonID, true);
 						QPushButton * bt = reinterpret_cast<QPushButton*>(ui.btGroupRepeats->button(buttonID));
-						if (bt)
+						if (bt) {
 							bt->setChecked(true);
-						
+						}
 					}
 					this->validateGuiState1();
 					this->showGUIState1();

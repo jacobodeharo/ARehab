@@ -143,63 +143,6 @@ namespace ARehabControl
 		return frame;
 	}
 
-	//ARehabFrame * ARehabFileReaderController::GetNextIntervalARehabFrame(unsigned long long int minIntervalFrame, unsigned long long int maxIntervalFrame)
-	//{
-	//	ARehabFrame * frame = NULL;
-	//	if (imputFile && imputFile->is_open())
-	//	{
-	//		frame = new ARehabFrame(
-	//			0,
-	//			0,
-	//			new ColorFrame(
-	//			new unsigned char[1920 * 1080 * 2],
-	//			1920,
-	//			1080
-	//			),
-	//			new BodyFrame(
-	//			new glm::vec3[JointType_Count],
-	//			new glm::vec2[JointType_Count],
-	//			new glm::vec4[JointType_Count],
-	//			JointType_Count,
-	//			new unsigned int[JointType_Count]
-	//			)
-	//			);
-
-	//		if (currentFrame > (maxIntervalFrame - minKeyFrame - 1))
-	//		{
-	//			this->playDirection = BACKWARD;
-	//			currentFrame = maxIntervalFrame - minKeyFrame - 1;
-	//		}
-	//		else if (currentFrame <= (minIntervalFrame - minKeyFrame)) {
-	//			this->playDirection = FORWARD;
-	//			currentFrame = minIntervalFrame - minKeyFrame + 1;
-	//		}
-	//		else {
-	//			currentFrame += ((this->playDirection > 0) ? 1 : -1);
-	//		}
-	//		imputFile->seekg((currentFrame * ARehabFrame::numBytesFrame), std::ios::beg);
-
-	//		previousTimeSpan = currentTimeSpan;
-
-	//		imputFile->read(reinterpret_cast<char*>(&(frame->keyFrame)), sizeof(unsigned long long int)); //Keyframe					
-	//		imputFile->read(reinterpret_cast<char*>(frame->body->joints3D), JointType_Count * sizeof(glm::vec3)); //3D Joint positions
-	//		imputFile->read(reinterpret_cast<char*>(frame->body->joints2D), JointType_Count * sizeof(glm::vec2)); //2D Joint positions
-	//		imputFile->read(reinterpret_cast<char*>(frame->body->jointOrientations), JointType_Count * sizeof(glm::vec4)); //Joint orientations
-	//		imputFile->read(reinterpret_cast<char*>(frame->body->kinectTrackedState), JointType_Count * sizeof(unsigned int)); //kinectTrackedState
-	//		imputFile->read(reinterpret_cast<char*>(frame->color->colorBufferYUY2), 1920 * 1080 * 2); //YUY2 color texture
-	//		imputFile->read(reinterpret_cast<char*>(&(frame->timespan)), sizeof(unsigned long long int)); //Timespan					
-
-	//		currentTimeSpan = frame->timespan;
-
-	//		unsigned long long int diferencia = glm::max(currentTimeSpan, previousTimeSpan) - glm::min(currentTimeSpan, previousTimeSpan);
-	//		if (previousTimeSpan == 0 || diferencia > 120)
-	//		{
-	//			previousTimeSpan = currentTimeSpan - 66; //66 ms per frame expected in the worst case
-	//		}
-	//	}
-	//	return frame;
-	//}
-
 	ARehabFrame * ARehabFileReaderController::GetNextIntervalARehabFrame(unsigned long long int minIntervalFrame, unsigned long long int maxIntervalFrame)
 	{
 		ARehabFrame * frame = NULL;
@@ -293,8 +236,9 @@ namespace ARehabControl
 			imputFile->read(reinterpret_cast<char*>(frame->color->colorBufferYUY2), 1920 * 1080 * 2); //YUY2 color texture
 			imputFile->read(reinterpret_cast<char*>(&(frame->timespan)), sizeof(unsigned long long int)); //Timespan
 
-			if (updateCurrent)
+			if (updateCurrent) {
 				currentFrame = framei - minKeyFrame;
+			}
 
 			currentTimeSpan = frame->timespan;
 			if (previousTimeSpan == 0 || (glm::max(currentTimeSpan, previousTimeSpan) - glm::min(currentTimeSpan, previousTimeSpan)) > 120)

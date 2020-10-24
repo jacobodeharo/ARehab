@@ -164,7 +164,6 @@ namespace ARehabGL
 			uniformLocations.clear();
 			linked = true;
 		}
-		//gl->glDeleteShader(handle); // Delete the shader as they're linked into our program now and no longer necessary
 	}
 
 	void GLShader::use(void) throw(GLShaderException)

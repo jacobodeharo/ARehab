@@ -1,25 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-This file is part of ARehab.
-
-ARehab is free software : you can redistribute it and / or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, version 3 of the License.
-
-ARehab is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with Foobar.If not, see <http://www.gnu.org/licenses/>.
-
-Copyright 2015 Jacobo de Haro
-jacobodeharo@gmail.com
-@jacobodeharo
-
--->
 <ui version="4.0">
  <class>ARehabClass</class>
  <widget class="QMainWindow" name="ARehabClass">
@@ -105,7 +84,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="toolTip">
-          <string>Acerca de...</string>
+          <string>About ARehab...</string>
          </property>
          <property name="autoFillBackground">
           <bool>false</bool>
@@ -152,7 +131,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="toolTip">
-          <string>Ayuda</string>
+          <string>Help</string>
          </property>
          <property name="autoFillBackground">
           <bool>false</bool>
@@ -294,7 +273,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
              <string notr="true">color: rgb(71, 71, 71);</string>
             </property>
             <property name="text">
-             <string>DETALLES DEL EJERCICIO</string>
+             <string>Exersise description</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -331,7 +310,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
              <string notr="true">background-color: rgb(225, 225, 225);</string>
             </property>
             <property name="text">
-             <string>Nombre del ejercicio</string>
+             <string>Exersise name</string>
             </property>
             <property name="margin">
              <number>12</number>
@@ -373,7 +352,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
                <string/>
               </property>
               <property name="placeholderText">
-               <string>Escriba aqui el nombre del ejercicio</string>
+               <string>Write here the exersise name...</string>
               </property>
              </widget>
             </item>
@@ -409,7 +388,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
              <string notr="true">background-color: rgb(225, 225, 225);</string>
             </property>
             <property name="text">
-             <string>Ruta del Fichero</string>
+             <string>File path</string>
             </property>
             <property name="margin">
              <number>12</number>
@@ -448,7 +427,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
                <string notr="true">background-color: rgb(250, 250, 250); color: rgb(70, 70, 70); padding: 8px 6px;</string>
               </property>
               <property name="placeholderText">
-               <string>Seleccione el fichero</string>
+               <string>Select the file path...</string>
               </property>
              </widget>
             </item>
@@ -484,7 +463,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
              <string notr="true">background-color: rgb(225, 225, 225);</string>
             </property>
             <property name="text">
-             <string>Descripción del ejercicio</string>
+             <string>Description</string>
             </property>
             <property name="margin">
              <number>12</number>
@@ -544,7 +523,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
                <enum>Qt::ScrollBarAlwaysOff</enum>
               </property>
               <property name="placeholderText">
-               <string>Escriba aquí una descripción del ejercicio...</string>
+               <string>Please, describe briefly the exersise...</string>
               </property>
              </widget>
             </item>
@@ -580,7 +559,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
              <string notr="true">background-color: rgb(225, 225, 225);</string>
             </property>
             <property name="text">
-             <string>Número de repeticiones</string>
+             <string>Number of repeats</string>
             </property>
             <property name="margin">
              <number>12</number>
@@ -1138,7 +1117,7 @@ background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.861, fx:0
                  <string notr="true">color: rgb(71, 71, 71);</string>
                 </property>
                 <property name="text">
-                 <string>SELECCIÓN DE NODOS</string>
+                 <string>Tracking Selection</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>

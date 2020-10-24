@@ -229,7 +229,6 @@ namespace ARehabUI
 					{
 						connect(logger, &QOpenGLDebugLogger::messageLogged, this, &QGLViewer::slot_LoggedGLMessage);
 						logger->startLogging(QOpenGLDebugLogger::SynchronousLogging);
-						//logger->startLogging(QOpenGLDebugLogger::AsynchronousLogging);
 						qDebug() << endl << "> Debug ON" << endl;
 					}
 				}
@@ -274,7 +273,6 @@ namespace ARehabUI
 
 		this->prepareShaderPrograms();
 		this->prepareTextures();
-		//this->prepareFBOs();
 		this->prepareVertexBuffers();
 		this->defaultShader->use();
 		emit openGLinitialized();
@@ -297,7 +295,6 @@ namespace ARehabUI
 
 			shaderProgBodyJoints = new GLShader(this->gl);
 			shaderProgBodyJoints->compile("../ARehabSDK/shaders/joints.vert");
-			//shaderProgBodyJoints->compile("../ARehabSDK/shaders/joints.geom");
 			shaderProgBodyJoints->compile("../ARehabSDK/shaders/joints.frag");
 			shaderProgBodyJoints->link();
 			shaderProgBodyJoints->validate();
@@ -321,41 +318,11 @@ namespace ARehabUI
 		}
 	}
 
-	//void QGLViewer::updateBodyBuffer(const QBitArray &jointsInvolved)
-	//{			
-	//	unsigned int interval = 0;
-	//	unsigned int * jointsTracked = new unsigned int[jointsInvolved.size()];
-	//	unsigned int numJointsTracked = 0;
-	//	for (unsigned int i = 0; i < jointsInvolved.size(); ++i)
-	//	{
-	//		if (jointsInvolved.testBit(i))
-	//		{
-	//			jointsTracked[i] = i;
-	//			numJointsTracked++;
-	//		}
-	//	}
-	//	if (this->refreshGL.isActive())
-	//	{
-	//		interval = this->refreshGL.interval();
-	//		this->refreshGL.stop();
-	//	}
-	//	if (this->vboBody)
-	//	{
-	//		delete[] this->vboBody;
-	//		this->vboBody = 0;
-	//	}
-	//	this->vboBody = new GLVBOBody(jointsTracked, numJointsTracked, this->gl);
-	//	if (interval > 0)
-	//		this->refreshGL.start(interval);
-	//}
-
 	void QGLViewer::updateBodyJoints(BodyFrame * body)
 	{
 		if (NULL != body)
 		{
 			this->vboBody->updateJoints(body->joints2D, body->jointOrientations, body->kinectTrackedState, body->numJoints);
-			//delete body;
-			//body = 0;
 		}
 	}
 
@@ -394,7 +361,6 @@ namespace ARehabUI
 
 	void QGLViewer::prepareTextures(void)
 	{
-		//gl->glEnable(GL_TEXTURE0);
 		gl->glEnable(GL_TEXTURE1);
 		try {
 			this->textureVideo = new GLTexture2D(this->gl, 1920 / 2, 1080, GL_RGBA, GL_UNSIGNED_BYTE);
@@ -413,7 +379,6 @@ namespace ARehabUI
 		gl->glGenTextures(1, &textureID);
 		gl->glBindTexture(GL_TEXTURE_2D, textureID);
 		gl->glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1920, 1080, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
-		//gl->glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1920, 1080, 0, GL_RGBA, GL_UNSIGNED_SHORT_4_4_4_4, NULL);	
 		gl->glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		gl->glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 		gl->glBindTexture(GL_TEXTURE_2D, 0);
@@ -433,35 +398,12 @@ namespace ARehabUI
 		GLuint textureColorbuffer = generateAttachmentTexture(false, false);
 		gl->glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureColorbuffer, 0);
 		// Create a renderbuffer object for depth and stencil attachment (we won't be sampling these)
-		//GLuint rbo;
-		//gl->glGenRenderbuffers(1, &rbo);
-		//gl->glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-		//gl->glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, 1920, 1080); // Use a single renderbuffer object for both a depth AND stencil buffer.
-		//gl->glBindRenderbuffer(GL_RENDERBUFFER, 0);
-		//gl->glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo); // Now actually attach it
-		// Now that we actually created the framebuffer and added all attachments we want to check if it is actually complete now
-		if (gl->glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-			std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << endl;
-		//gl->glBindFramebuffer(GL_FRAMEBUFFER, 0);
-		gl->glBindFramebuffer(GL_FRAMEBUFFER, this->defaultFramebufferObject());
 
-		//try {
-		//	this->fbo = new GLFBO(this->gl);
-		//	if (this->fbo)
-		//	{
-		//		GLTexture2D * tex2D = new GLTexture2D(this->gl, 1920, 1080, GL_RGBA);
-		//		if (tex2D)
-		//		{
-		//			this->fbo->atachTexture2D(tex2D);
-		//			//delete tex2D;
-		//			//tex2D = 0;
-		//		}
-		//	}
-		//}
-		//catch (GLTextureException & ex) {
-		//	qDebug() << ex.what() << endl;
-		//	//exit(EXIT_FAILURE);
-		//}
+		// Now that we created the framebuffer and added all attachments we want to check if it is actually complete now
+		if (gl->glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
+			std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << endl;
+		}
+		gl->glBindFramebuffer(GL_FRAMEBUFFER, this->defaultFramebufferObject());
 	}
 
 	void QGLViewer::resizeGL(int w, int h)
@@ -477,7 +419,6 @@ namespace ARehabUI
 		aspectCorrection = glm::scale(glm::vec3(1.0f / aspectRatio, 1.0f, 1.0f));
 
 		GLfloat middleX = 1920.0f / 2.0f, middleY = 1080.0f / 2.0f;
-		//glm::mat4 aspectCorrection;
 		if (aspectRatio >= expectedAspectRatio)
 		{
 			model = glm::scale(glm::vec3(scaleP, 1.0f, 1.0f)) * glm::translate(glm::vec3(-middleX, -middleY, 0.0f)); //Center video frames on viewport and preserve aspectratio

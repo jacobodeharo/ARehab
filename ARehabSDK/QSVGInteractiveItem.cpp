@@ -72,7 +72,6 @@ namespace ARehabUI
 
 	void QSVGInteractiveItem::hoverEnterEvent(QGraphicsSceneHoverEvent * event)
 	{
-		//QGraphicsSvgItem::hoverEnterEvent(event);	
 		if (this->enabled)
 		{
 			this->setCursor(Qt::PointingHandCursor);
@@ -88,7 +87,6 @@ namespace ARehabUI
 
 	void QSVGInteractiveItem::hoverLeaveEvent(QGraphicsSceneHoverEvent * event)
 	{
-		//QGraphicsSvgItem::hoverLeaveEvent(event);
 		if (this->enabled)
 		{
 			this->setCursor(Qt::ArrowCursor);
@@ -106,7 +104,6 @@ namespace ARehabUI
 
 	void QSVGInteractiveItem::mouseReleaseEvent(QGraphicsSceneMouseEvent * event)
 	{
-		//QGraphicsSvgItem::mouseReleaseEvent(event);
 		if (this->enabled)
 		{
 			if (this->checkable)
@@ -121,14 +118,10 @@ namespace ARehabUI
 			else
 				emit clicked();
 		}
-
-		//this->setEnabled(!this->enabled);
 	}
 
 	void QSVGInteractiveItem::mousePressEvent(QGraphicsSceneMouseEvent * event)
 	{
-		//QGraphicsSvgItem::mousePressEvent(event);
-
 		if (this->enabled)
 		{
 			this->effect->setColor(this->colorChecked);

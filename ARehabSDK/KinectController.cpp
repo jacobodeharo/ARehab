@@ -116,7 +116,6 @@ namespace ARehabControl
 	ARehabFrame * KinectController::GetNextARehabFrame(void)
 	{
 		HRESULT hr = 1;
-		//unsigned long long int timeElapsed = ARehabTools::Measures::milliseconds_now();
 		ARehabFrame * frame = NULL;
 		static const unsigned int nBytes = 1920 * 1080 * 2;
 
@@ -192,8 +191,6 @@ namespace ARehabControl
 
 									pBody->GetJoints(_countof(joints), joints);
 									hr = pBody->GetJointOrientations(_countof(joints), orientations); //Get the joint orientations										
-									//TODO: UPDATE jointOrientations!!
-									//jointFilterTracked->Update(joints, orientations); //Smooth filter... Slerp...
 									jointFilterTracked->Update(joints);
 
 									ColorSpacePoint colorPoint = { 0 };
@@ -210,15 +207,12 @@ namespace ARehabControl
 										bodyFrame->joints2D[i].y = colorPoint.Y;
 										bodyFrame->jointOrientations[i] = glm::vec4( orientations[i].Orientation.w,	orientations[i].Orientation.x, orientations[i].Orientation.y, orientations[i].Orientation.z	);
 									} //For all joints
-									//bodyFrame = new BodyFrame(points3D, points2D, jointOrientations, JointType_Count, tracked);
 								} else continue; //else, continue checking the next body														
 							}
 						}//For all bodies
 					}
-					//SafeRelease(pBodyFrame);
 				}
 			}
-//			SafeRelease(multiSourceFrame);
 		}
 		if (colorFrame)
 		{

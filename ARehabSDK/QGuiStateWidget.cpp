@@ -81,12 +81,12 @@ namespace ARehabUI
 		svgstate2 = new QSVGTristateItem(":/svg/state.svg", ":/svg/stateok.svg", ":/svg/stateFail.svg", containerRect);
 		svgstate3 = new QSVGTristateItem(":/svg/state.svg", ":/svg/stateok.svg", ":/svg/stateFail.svg", containerRect);
 
-		txtState0 = new QGraphicsSimpleTextItem(QLatin1String("Definición"), containerRect);
-		txtState1 = new QGraphicsSimpleTextItem(QLatin1String("Grabación"), containerRect);
-		txtState2 = new QGraphicsSimpleTextItem(QLatin1String("Recorte"), containerRect);
-		txtBack = new QGraphicsSimpleTextItem(tr("Anterior"), svgBack);
-		txtNext = new QGraphicsSimpleTextItem(tr("Siguiente"), svgNext);
-		txtSave = new QGraphicsSimpleTextItem(tr("Guardar"), svgSave);
+		txtState0 = new QGraphicsSimpleTextItem(QLatin1String("Definition"), containerRect);
+		txtState1 = new QGraphicsSimpleTextItem(QLatin1String("Recording"), containerRect);
+		txtState2 = new QGraphicsSimpleTextItem(QLatin1String("Cutting"), containerRect);
+		txtBack = new QGraphicsSimpleTextItem(tr("Back"), svgBack);
+		txtNext = new QGraphicsSimpleTextItem(tr("Next"), svgNext);
+		txtSave = new QGraphicsSimpleTextItem(tr("Save"), svgSave);
 
 		svgCurrentState = new QGraphicsSvgItem(":/svg/currentState.svg", containerRect);
 
@@ -103,8 +103,6 @@ namespace ARehabUI
 		txtState2->setPen(Qt::NoPen);
 		txtState2->setBrush(QBrush(QColor(0, 0, 0, 150)));
 
-		//font.setPixelSize(12);
-
 		txtBack->setFont(font);
 		txtBack->setPen(Qt::NoPen);
 		txtBack->setBrush(QBrush(QColor(200, 200, 200, 255)));
@@ -117,9 +115,6 @@ namespace ARehabUI
 		txtSave->setFont(font);
 		txtSave->setPen(Qt::NoPen);
 		txtSave->setBrush(QBrush(QColor(200, 200, 200, 255)));
-
-		//svgstate1->setState(QSVGTristateItem::Valid);
-		//svgstate2->setState(QSVGTristateItem::NotValid);
 	}
 
 	void QGUIStateWidget::doLayout(void)
@@ -131,7 +126,6 @@ namespace ARehabUI
 
 		QGraphicsItemToolkit::centerItemVertically(svgstate1);
 		svgstate1->setX(svgInitialState->pos().x() - (svgstate1->boundingRect().width() / 2.0f));
-		//QGraphicsItemToolkit::stackLeft(svgBack, svgstate1, 60);
 		QGraphicsItemToolkit::moveTopLeft(svgBack);
 		QGraphicsItemToolkit::centerItemVertically(svgBack);
 
@@ -139,7 +133,6 @@ namespace ARehabUI
 
 		QGraphicsItemToolkit::centerItemVertically(svgstate3);
 		svgstate3->setX(svgFinalState->pos().x() + svgFinalState->boundingRect().width() - (svgstate3->boundingRect().width() / 2.0f));
-		//QGraphicsItemToolkit::stackRight(svgNext, svgstate3, 60);
 		QGraphicsItemToolkit::moveTopRight(svgNext);
 		QGraphicsItemToolkit::centerItemVertically(svgNext);
 
@@ -167,14 +160,11 @@ namespace ARehabUI
 		QGraphicsItemToolkit::moveTopLeft(txtNext, 8);
 		QGraphicsItemToolkit::centerItemVertically(txtNext);
 
-		//QGraphicsItemToolkit::moveTopLeft(txtSave, 8);
 		QGraphicsItemToolkit::centerItemHorizontally(txtSave);
-		//QGraphicsItemToolkit::centerItemVertically(txtSave);
 		txtSave->setPos(txtSave->pos().x(), 40);
 
 		QGraphicsItemToolkit::centerItem(containerRect);
 		this->containerRect->setTransformOriginPoint(this->containerRect->rect().center());
-		//this->containerRect->setScale(0.9);
 	}
 
 	void QGUIStateWidget::showNextButton(bool show)
@@ -259,13 +249,6 @@ namespace ARehabUI
 
 	void QGUIStateWidget::slot_actionBack(void)
 	{
-		//QPropertyAnimation * animation = new QPropertyAnimation(svgCurrentState, "pos");
-		//animation->setDuration(1000);
-		//animation->setEasingCurve(QEasingCurve::InCubic);
-		//animation->setStartValue(svgCurrentState->pos());
-		//animation->setEndValue(QPointF(svgCurrentState->pos().x()+400, svgCurrentState->pos().y()));
-		//animation->start();
-
 		unsigned int previousState = this->currentState;
 		this->currentState--;
 		if (this->currentState < 0)
@@ -287,7 +270,6 @@ namespace ARehabUI
 	{
 		unsigned int previousState = this->currentState;
 		this->currentState = QGUIStateWidget::Definition;
-		//qDebug() << "State0 Pressed: Current state " << this->currentState << endl;
 		QSVGTristateItem * item = this->stateItems.at(this->currentState);
 		if (item != 0)
 		{
@@ -304,7 +286,6 @@ namespace ARehabUI
 	{
 		unsigned int previousState = this->currentState;
 		this->currentState = QGUIStateWidget::Recording;
-		//qDebug() << "State1 Pressed: Current state " << this->currentState << endl;
 		QSVGTristateItem * item = this->stateItems.at(this->currentState);
 		if (item != 0)
 		{
@@ -320,7 +301,6 @@ namespace ARehabUI
 	{
 		unsigned int previousState = this->currentState;
 		this->currentState = QGUIStateWidget::Cutting;
-		//qDebug() << "State2 Pressed: Current state " << this->currentState << endl;
 		QSVGTristateItem * item = this->stateItems.at(this->currentState);
 		if (item != 0)
 		{
@@ -348,7 +328,6 @@ namespace ARehabUI
 			this->hide();
 		}
 
-		//qDebug() << "NEXT Pressed: Current state " << this->currentState << endl;
 		emit sig_changeState(previousState, this->currentState);
 	}
 
@@ -379,23 +358,6 @@ namespace ARehabUI
 		this->setRenderHints(QPainter::Antialiasing | QPainter::HighQualityAntialiasing | QPainter::SmoothPixmapTransform | QPainter::TextAntialiasing);
 		this->setStyleSheet("border: none; background: transparent;");
 
-		//QGraphicsScene * scene = this->scene();		
-
-		//this->states.addState(&state0);	
-		//this->states.addState(&state1);
-		//this->states.addState(&state2);
-		//this->states.addState(&state3);
-		//
-		//state1.addTransition(this, SIGNAL(QGUIStateWidget::next()), &state2);
-		//state2.addTransition(this, SIGNAL(QGUIStateWidget::next()), &state3);
-		//state3.addTransition(this, SIGNAL(QGUIStateWidget::next()), &state1);
-		//
-		//state1.addTransition(this, SIGNAL(QGUIStateWidget::back()), &state3);
-		//state2.addTransition(this, SIGNAL(QGUIStateWidget::back()), &state1);
-		//state3.addTransition(this, SIGNAL(QGUIStateWidget::back()), &state2);
-
-		//this->states.setInitialState(&state0);
-
 		loadSVGFiles();
 
 		this->stateItems.push_back(0);
@@ -409,7 +371,6 @@ namespace ARehabUI
 
 	void QGUIStateWidget::showEvent(QShowEvent * event)
 	{
-		//	this->currentState = 1;	
 		QSVGTristateItem * item = this->stateItems.at(this->currentState);
 		if (item != 0)
 		{
