@@ -157,7 +157,6 @@ namespace ARehabGUIDesigner
 
 		proxyBtNuevo->setPos((wGraphicsView / 2.0f) - (btNew->width() / 2.0f), hGraphicsView / 2.0f);
 		proxyBtLoad->setPos((wGraphicsView / 2.0f) - (btLoad->width() / 2.0f), 80 + (hGraphicsView / 2.0f));
-		proxyBtLoadResults->setPos((wGraphicsView / 2.0f) - (btLoadResults->width() / 2.0f), 160 + (hGraphicsView / 2.0f));
 
 		ui.graphicsInicial->update();
 
