@@ -26,7 +26,7 @@ jacobodeharo@gmail.com
 #define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
 
 // GLM
-#define GLM_SWIZZLE //This enable swizzle operators, selecting components like foo.xyz
+#define GLM_FORCE_SWIZZLE //This enable swizzle operators, selecting components like foo.xyz
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
 #include <gtx/transform.hpp>

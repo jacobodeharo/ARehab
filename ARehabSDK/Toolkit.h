@@ -25,7 +25,7 @@ jacobodeharo@gmail.com
 #include <string>
 #include <sys/stat.h>
 
-#define GLM_SWIZZLE //This enable swizzle operators, selecting components like foo.xyz
+#define GLM_FORCE_SWIZZLE //This enable swizzle operators, selecting components like foo.xyz
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
 #include <gtx/transform.hpp>

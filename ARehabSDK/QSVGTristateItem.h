@@ -31,7 +31,7 @@ namespace ARehabUI
 		Q_OBJECT
 
 	public:
-		static enum ItemState { Initial, NotValid, Valid };
+		enum ItemState { Initial, NotValid, Valid };
 		QSVGTristateItem(const QString filename, const QString filenameOk, const QString filenameBad, QGraphicsItem * parent = 0);
 		virtual void doLayout(void);
 		void setState(ItemState state);

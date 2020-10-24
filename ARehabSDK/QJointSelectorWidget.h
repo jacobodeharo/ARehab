@@ -36,7 +36,7 @@ namespace ARehabUI
 		Q_OBJECT
 
 		public:
-			static enum Joints {
+			enum Joints {
 				SpineBase,		//	Base of the spine
 				SpineMid,		// 	Middle of the spine
 				Neck,			// 	Neck
